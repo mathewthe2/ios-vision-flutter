@@ -52,6 +52,9 @@ public class SwiftAppleVisionFlutterPlugin: NSObject, FlutterPlugin {
                     result(textList)
                 }
             }
+
+            // TODO: parameterize the language
+            request.recognitionLanguages = ["ja-JP"]
             
             do {
                 try requestHandler.perform([request])
